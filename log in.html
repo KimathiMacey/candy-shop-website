@@ -3,34 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/49bd9f441f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sign up.css">
     <title>Firebase Authentication</title>
-     <link rel="stylesheet" href="sign up.css">
+     
 
 </head>
 <body>
-    <div id="login-box">
-        <div id="left">
-        <h1>LogIn</h1>
-        
-        <input type="text" id="email" name="email" placeholder="E-mail">
-        <input type="password" id="password" name="password" placeholder="Password">
-
-        <input type="submit" id="login" name="login" value="Login">
-
-    </div>
-    <div class="right">
-    <span class="loginwith">Sign In with <br/>Social network</span>
+    
+<div class="login-box">
+  <h1>LogIn</h1>
+  <form>
+    <div class="text_field">
+      <input type="text" id="email" name="email"  placeholder="E-mail"> </div>
+    <div class="text_field">
+      <input type="password" id="password" name="password" placeholder="Password"></div>
+      <input type="submit" id="login" name="login" value="Login">
+      
      
-    <button class="social-signin facebook"> Log in with Facebook</button>
-    <button class="social-signin twitter"> Log in with Twitter</button>
-    <button class="social-signin google"> Log in with Google</button>
+     <div class="or">OR </div> <br>
 
-    </div>
-    <div class="or">OR</div>
-</div>
+      <a href="#" class="fb btn">
+        <i class="fa fa-facebook-f"></i> Login with Facebook
+      </a> <br>
+      <a href="#" class="twitter btn">
+        <i class="fa fa-twitter"></i> Login with Twitter
+      </a> <br>
+      <a href="#" class="google btn">
+        <i class="fa fa-google fa-fw"></i> Login with Google+
+      </a> <br>
+    
+      
+      <div class="login_link"> Not a member?
+        <a href="sign up.html">Sign Up</a>
+       </div>
+    </form>
+  </div>
 
 
-</body>
 
 <script type="module">
     // Import the functions you need from the SDKs you need
@@ -118,7 +128,7 @@ logout.addEventListener('click',(e) =>{
 
 })
 
+</script>
 
-
-  </script>
+</body>
 </html>
