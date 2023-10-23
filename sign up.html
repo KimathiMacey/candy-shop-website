@@ -10,7 +10,7 @@
 <body>
     <div class="login-box">
       <h1>Sign Up</h1>
-      <form method="post">
+      <form>
         <div class="text_field"> 
           <input type="text" id="username" name="username" placeholder="Username"> </div>
         <div class="text_field">
@@ -27,7 +27,7 @@
       </div>
 
 
-</body>
+
 
 <script type="module">
     // Import the functions you need from the SDKs you need
@@ -53,7 +53,8 @@
     const database = getDatabase(app);
     const auth = getAuth();
     
-
+    document.addEventListener('DOMContentLoaded', function() {
+    const signUp = document.getElementById('signUp'); 
 
   signUp.addEventListener('click',(e) => {
 
@@ -80,8 +81,10 @@
     alert(errorMessage);
     // ..
   });
-
+ });
 
   });
   </script>
+
+</body>
 </html>

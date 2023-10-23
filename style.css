@@ -465,26 +465,150 @@ padding: 40px 0 2px 0;
 
 
 
+/* search bar */
+#searchbar{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items: center;
+
+background-repeat: no-repeat;
+background-position: 20% 30%;
+background-color: #f5ddec;
+}
 
 
+.wrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+  #search-wrap {
+    margin: 1em 0;
+  }
+  #search-wrap input {
+    background-color: transparent;
+    width: 40%;
+    border-bottom: 2px solid #110f29;
+    padding: 1em 0.3em;
+  }
+  #search-wrap input:focus {
+    border-bottom-color: #6759ff;
+  }
+  #search-wrap button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #6759ff;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 0.5em;
+  }
+  .button-wrap {
+    border: 2px solid #6759ff;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #6759ff;
+    cursor: pointer;
+  }
+  
 
+/* Cart page */
 
+#cart table{
+   width: 100%;
+   border-collapse: collapse;
+   table-layout: fixed;
+   white-space: nowrap;
+}
 
+#cart table img{
+    width: 70px;
+}
 
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
 
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
 
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
 
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
 
+#cart table td:nth-child(5) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
 
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
 
+}
 
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
 
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+#cart table tbody td{
+    font-size: 13px;
+}
 
+#card-add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+    
 
+}
 
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
 
-
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+#subtotal h3{
+    padding-bottom: 15px;
+}
+#subtotal button{
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+}
 
 
 
