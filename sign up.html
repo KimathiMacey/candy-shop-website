@@ -3,88 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firebase Authentication</title>
+    <title>Sign Up</title>
      <link rel="stylesheet" href="sign up.css">
 
 </head>
 <body>
-    <div class="login-box">
-      <h1>Sign Up</h1>
-      <form>
-        <div class="text_field"> 
-          <input type="text" id="username" name="username" placeholder="Username"> </div>
-        <div class="text_field">
-          <input type="text" id="email" name="email"  placeholder="E-mail"> </div>
-        <div class="text_field">
-          <input type="password" id="password" name="password" placeholder="Password"></div>
-          <input type="submit" id="signUp" name="signup_submit" value="Sign Up">
-          
-         <div class="login_link"> Already a member?
-          <a href="log in.html">Login</a>
-         </div>
+  <div id="login-box">
+    <div class="left">
+      <h1>Sign up</h1>
       
-        </form>
-      </div>
-
-
-
+      <input type="text" id="username" name="username" placeholder="Username" />
+      <input type="text" id="email" name="email" placeholder="E-mail" />
+      <input type="password" id="password" name="password" placeholder="Password" />
+      <input type="submit" id="signUp" name="signup_submit" value="Sign me up" />
+      
+      <h2>Already have an account? <a href="log in.html">Log In</a> </h2>  
+    </div>
+    
+    
+</body>
 
 <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyAOqM7AyokqY8MtKPBmfKrmngEKfci73Aw",
-      authDomain: "authentication-c9206.firebaseapp.com",
-      databaseURL: "https://authentication-c9206-default-rtdb.firebaseio.com",
-      projectId: "authentication-c9206",
-      storageBucket: "authentication-c9206.appspot.com",
-      messagingSenderId: "166652954386",
-      appId: "1:166652954386:web:aa72c0e0c79cdc124d95cb"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-    const auth = getAuth();
-    
-    document.addEventListener('DOMContentLoaded', function() {
-    const signUp = document.getElementById('signUp'); 
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 
-  signUp.addEventListener('click',(e) => {
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-   var email = document.getElementById('email').value;
-   var password = document.getElementById('password').value;
-   var username = document.getElementById('username').value;
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCMyYEOkrkHIhLnng1qeDJP0OJwAhvyIOc",
+    authDomain: "candy-shop-234bb.firebaseapp.com",
+    databaseURL: "https://candy-shop-234bb-default-rtdb.firebaseio.com",
+    projectId: "candy-shop-234bb",
+    storageBucket: "candy-shop-234bb.appspot.com",
+    messagingSenderId: "367502237429",
+    appId: "1:367502237429:web:2d0f7fb1d99d8c64116fbc",
+    measurementId: "G-62EBLL1BN1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+
+  signUp.addEventListener('click', (e) => {
+
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var username = document.getElementById('username').value;
 
     createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
+   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    set(ref(database, 'users/' + user.uid),{
-          username: username,
-          email: email
-}) 
-    alert('user created')
+
+    set(ref(database, 'users/' + user.uid), {
+      username: username,
+      email: email
+
+    })
+    alert('user created!');
+    window.location.href = "/useraccount.html";  // Replace with the actual path of your account page
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
 
-
     alert(errorMessage);
     // ..
   });
- });
-
-  });
-  </script>
-
-</body>
+});
+</script>
 </html>

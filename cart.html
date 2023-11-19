@@ -3,169 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/49bd9f441f.js" crossorigin="anonymous"></script>
-    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="cart.css">
     
+        <!-- CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    
+    
+    
+             <!-- JS CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-rbs5gXFiGgUKKkZt6R5eCzjL6g/oD23Qe3cvlT+tsI9xTnep1jsYD4ELWIzjI9J" crossorigin="anonymous"></script>
+    <title>Cart</title>
 </head>
-<body> 
-    <section id="header">
-        <a href="#"><img src="./Images/logo.jpeg" class="logo" alt=""></a>
-         
-        <!--Navigation bar-->
-         <div> 
-            <ul id="navbar">
-                <li> 
-                    <a  href="index.html">Home</a> 
-                    </li>
-                <li> 
-                    <a  href="shop.html">Shop</a> 
-                    </li>
-                <li> 
-                    <a href="about.html">About</a> 
-                    </li>
-                <li> 
-                    <a href="contact.html">Contact</a> 
-                    </li>
-                    
-                    <li> 
-                        <a class="active" href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a> 
-                        </li>
-            </ul>
-                
-            </div> 
-
-    </section>
-
-    <section id="page-header">
+<body>
+  <section id="page-header">
         
-         <h2>Sweet and Tasty</h2>
-         
-         <p>Satisty your sweet tooth with authentic treats</p>
-    </section>
-    <section id="cart" class="section-p1">
-        <table width="100%">
-            <thead>
-                <tr>
-                    <td>Remove</td>
-                    <td>Image</td>
-                    <td>Product</td>
-                    <td>Price</td>
-                    <td>Quantity</td>
-                    <td>Subtotal</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#"><i class="fa-solid fa-xmark"></i></a></td>
-                    <td><img src="Images/Products/B1.jpeg" alt=""></td>
-                    <td>Sugar free, Coffee Rio</td>
-                    <td>KSh 1200</td>
-                    <td><input type="number" value="1"></td>
-                    <td>KSh 1200</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="fa-solid fa-xmark"></i></a></td>
-                    <td><img src="Images/Products/P4 Candy Bars.jpeg" alt=""></td>
-                    <td>Candy Bars</td>
-                    <td>KSh 500</td>
-                    <td><input type="number" value="1"></td>
-                    <td>KSh 500</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="fa-solid fa-xmark"></i></a></td>
-                    <td><img src="Images/Products/P3 Lollis.jpeg" alt=""></td>
-                    <td>Lollipops</td>
-                    <td>KSh 500</td>
-                    <td><input type="number" value="1"></td>
-                    <td>KSh 500</td>
-                </tr>
-                
-            </tbody>
-
-        </table>
-
-    </section>
+    <h2>Sweet and Tasty</h2>
     
-    <section id="cart-add" class="section-p1">
-        <div id="subtotal">
-            <h3>Cart Totals</h3>
-            <table>
-                <tr>
-                    <td>Cart Subtotal</td>
-                    <td>Ksh 2200</td>
-                </tr>
-                <tr>
-                    <td>Shipping</td>
-                    <td>Free</td>
-                </tr>
-                <tr>
-                    <td><Strong>Total</Strong></td>
-                    <td><Strong>Ksh 2200</Strong></td>
-                </tr>
-            </table>
-            <button class="normal">Proceed to checkout</button>
-        </div>
+    <p>Satisfy your sweet tooth with authentic treats</p>
+    
 
-    </section>
 
-     <footer class="section-p1">
-         <div class="col">
-            <img class="logo" src="./Images/logo.jpeg" alt="">
-             <h4>Contact</h4>
-             <p><strong>Address: </strong> 0040, Lotus Plaza, 4th floor, Chiromo Lane, Off Ojijo Road
-            <br>P.O Box 12345-00400, Nairobi</p>
-            <p><strong>Phone: </strong> +254 7123456789</p>
-            <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
-         <div class="follow">
-            <h4>Follow Us</h4>
-            <div class="icon">
-            <i class="fa fa-facebook-f"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-pinterest-p"></i>
-            <i class="fa fa-youtube"></i>
-            </div>
+</section>
+    <!-- Nav -->
+<nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
     </div>
-         
- </div>
+</nav>
 
- <div class="col">
-    <h4>About</h4>
-    <a href="#">About Us</a>
-    <a href="#">Delivery Information</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms & Condition</a>
-    <a href="#">Contact Us</a>
-     
- </div>
- <div class="col">
-    <h4>My Account</h4>
-    <a href="#">Sign In</a>
-    <a href="#">View Cart</a>
-    <a href="#">My Wishlist</a>
-    <a href="#">Track My Order</a>
-    <a href="#">Help</a> 
-     
- </div>
-     <div class="col install">
-        <h4>Install App</h4>
-        <p>From App Store or Google</p>
-     <div class="row">
-        <img src="./Images/features/f6.jpeg" width="120px" height="60px"   alt="">
-        <img src="./Images/features/f5.jpeg" width="120px" height="60px" alt="">
-
-     </div>
-     <p>Secured Payment Gateways</p>
-     <img src="./Images/features/f7.png"  width="160px" height="80px" alt="">
+<!-- Main -->
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;" >
+  <img class="card-img-top" src="./Images/Products/P2 Hard candy.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Hard Candy</h4>
+    <p class="card-text">Price: KSh 500</p>
+    <a href="#" data-name="Hard Candy" data-price="500" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/P3 Lollis.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Rainbow Lollipops</h4>
+    <p class="card-text">Price: KSh 500</p>
+    <a href="#" data-name="Rainbow Lollipops" data-price="500" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/P4 Candy Bars.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Crunch Candy Bars</h4>
+    <p class="card-text">Price: KSh 500</p>
+    <a href="#" data-name="Crunch Candy Bars" data-price="500" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/P4 Candy Bars.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Crunch Candy Bars</h4>
+    <p class="card-text">Price: KSh 500</p>
+    <a href="#" data-name="Crunch Candy Bars" data-price="500" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/P5 Jellibeans.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Jelly Beans</h4>
+    <p class="card-text">Price: KSh 500</p>
+    <a href="#" data-name="Jelly Beans" data-price="500" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/P6 Cookies.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Cookies</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Cookies" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/P7 Gummy Bears.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Gummy Bears</h4>
+    <p class="card-text">Price: KSh 500</p>
+    <a href="#" data-name="Gummy Bears" data-price="500" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/P8 gums.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Charms Bubble Gums</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Charms Bubble Gums" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/c1.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Vanilla Cupcake</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Vanilla Cupcake" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/c2.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Strawberry Cupcake</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Strawberry Cupcake" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/c3.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Coconut cream Cupcake</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Coconut cream Cupcake" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/c4.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Chocolate Rasberry Cupcake</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Chocolate Rasberry Cupcake" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/D1.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Plain Donut</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Plain Donut" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="/Images/Products/D2.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Strawberry Glazed with Sprinkles Donut</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Strawberry Glazed with Sprinkles Donut" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/D3.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Brown Sugar Peanut Donut</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Brown Sugar Peanut Donut" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col">
+        <div class="card" style="width: 20rem; border-radius: 20px;">
+  <img class="card-img-top" src="./Images/Products/D4.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Chocolate Glazed Donut</h4>
+    <p class="card-text">Price: KSh 200</p>
+    <a href="#" data-name="Chocolate Glazed Donut" data-price="200" class="add-to-cart btn btn-primary">Add to cart</a>
+  </div>
+</div>
+      </div>
     </div>
-     <div class="copyright">
-        <p>©2023, Candy Crash-us. MaceyKim Free World</p>
+</div>
 
-     </div> 
-     </footer>
+  
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: KSh<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div> 
 
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
